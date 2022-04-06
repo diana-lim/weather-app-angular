@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="widget-row" *ngIf="weatherData.isDay">
+    <i class="fas fa-3x fa-sun sun"></i>
+  </div>
+  <div class="widget-row" *ngIf="!weatherData.isDay">
+    <i class="fas fa-3x fa-moon moon"></i>
+  </div>
+  <div class="widget-row cloudDiv">
+    <i class="fas fa-cloud fa-3x cloud"></i>
+  </div>
+  <div class="widget-row" style="font-size: 32px; margin-top: 5px;">{{weatherData.temp_celcius}} &#176;</div>
+  <div class="widget-row" style="font-size: 12px; display: inline-block; margin-left: 35%;">{{weatherData.temp_min}} &#176; / &nbsp;</div>
+  <div class="widget-row" style="font-size: 12px; display: inline-block;">{{weatherData.temp_feels_like}} &#176;</div>
+  <div class="widget-row" style="font-size: 25px; margin-top: 10px;">{{weatherData.name}} &#176;</div>
+  <div class="widget-row" style="font-size: 12px;">Humidity: {{weatherData.main.humidity}} %</div>
+</div>
